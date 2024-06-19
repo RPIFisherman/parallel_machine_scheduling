@@ -16,9 +16,9 @@ class PMSP_MIP_TIM(object):
   def __init__(self, objective_type="min_sum"):
     self.obj_type = objective_type
     ## solver settings
-    # self.optimizer = SolverFactory("cbc")
+    self.optimizer = SolverFactory("cbc")
     # self.optimizer = SolverFactory("cplex", executable="/home/pengchen/ibm/ILOG/CPLEX_Studio129/cplex/bin/x86-64_linux/cplex")
-    self.optimizer = SolverFactory("gurobi")
+    # self.optimizer = SolverFactory("gurobi")
     # self.optimizer.options['tol'] = 1e-1
     # self.optimizer.options['MIPgap'] = 5
     # self.optimizer.options['Heuristics'] = 1

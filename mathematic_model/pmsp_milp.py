@@ -17,8 +17,9 @@ from jsp_bbs import SRPT_Preemptive_Bound, sequence_eval, job_scheduling, sequen
 class PMSP_MILP(object):
   def __init__(self, objective_type="min_sum"):
     self.obj_type = objective_type
+    self.optimizer = SolverFactory("cbc")
     # self.optimizer = SolverFactory("cplex", executable="/home/pengchen/ibm/ILOG/CPLEX_Studio129/cplex/bin/x86-64_linux/cplex")
-    self.optimizer = SolverFactory("gurobi")
+    # self.optimizer = SolverFactory("gurobi")
     # self.optimizer.options['tol'] = 1e-1
     # self.optimizer.options['MIPgap'] = 5
     # self.optimizer.options['Heuristics'] = 1
